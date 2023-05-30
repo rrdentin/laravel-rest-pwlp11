@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\ApiAuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasiswaController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +33,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });*/
 
 Route::apiResource('/mahasiswa', MahasiswaController::class);
+
+//Praktikum JS 12
+Route::post('/login',[ApiAuthController::class,'login']);
